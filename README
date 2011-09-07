@@ -1,0 +1,20 @@
+bdbtest - Berkeley DB example
+Colin King <cking@m202.net>
+
+This application demonstrates the C++ API of Berkeley DB (bdb).
+It has been tested on Ubuntu with the following packages:
+libdb5.1++-dev
+libreadline-dev
+
+$ make
+g++ -lreadline -ldb_cxx bdb_test.cc -o bdb_test
+$ ./bdb_test 
+DB file name: test.db
+Command (g=get, p=put, q=quit): p
+Enter key: 123
+Enter value: Hello BDB!
+Command (g=get, p=put, q=quit): g
+Enter key: 123
+Data = Hello BDB!
+Command (g=get, p=put, q=quit): q
+
